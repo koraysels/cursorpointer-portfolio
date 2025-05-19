@@ -72,14 +72,14 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  // db: postgresAdapter({
-  //   pool: {
-  //     connectionString: process.env.POSTGRES_URI || ''
-  //   }
-  // }),
-  db: mongooseAdapter({
-    url: process.env.MONGODB_URI || '',
+  db: postgresAdapter({
+    pool: {
+      connectionString: process.env.POSTGRES_URI || ''
+    }
   }),
+  // db: mongooseAdapter({
+  //   url: process.env.MONGODB_URI || '',
+  // }),
 
   /**
    * Payload can now accept specific translations from 'payload/i18n/en'
