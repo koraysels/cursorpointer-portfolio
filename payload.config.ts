@@ -1,5 +1,5 @@
 import path from 'path'
-// import { postgresAdapter } from '@payloadcms/db-postgres'
+import { postgresAdapter } from '@payloadcms/db-postgres'
 import { en } from 'payload/i18n/en'
 import {
   AlignFeature,
@@ -20,7 +20,6 @@ import {
   UploadFeature,
 } from '@payloadcms/richtext-lexical'
 //import { slateEditor } from '@payloadcms/richtext-slate'
-import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload/config'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
